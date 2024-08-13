@@ -1,4 +1,4 @@
-let invoices = [
+const invoices = [
    {
      name: "Santa Monica",
      number: 1995,
@@ -29,8 +29,16 @@ let invoices = [
      amount: "$4,600",
      due: "01/27/1998",
    },
- ];
+];
  
- export function getInvoices() {
-   return invoices;
- }
+export function getInvoices()
+{
+  return invoices;
+}
+
+export function getInvoice(number : any)
+{
+  return invoices.find (
+    (invoice) => invoice.number === number
+  );
+}
