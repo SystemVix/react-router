@@ -1,4 +1,4 @@
-const invoices = [
+let invoices = [
    {
      name: "Santa Monica",
      number: 1995,
@@ -36,9 +36,16 @@ export function getInvoices()
   return invoices;
 }
 
-export function getInvoice(number : any)
+export function getInvoice(number: any)
 {
   return invoices.find (
     (invoice) => invoice.number === number
+  );
+}
+
+export function deleteInvoice(number: any)
+{
+  invoices = invoices.filter (
+    (invoice) => invoice.number !== number
   );
 }
